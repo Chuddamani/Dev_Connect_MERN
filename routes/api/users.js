@@ -70,6 +70,7 @@ router.post(
       // Return JSON Token
       const payload = {
         user: {
+          // Adding the complete user object in payload + adding id field to it
           id: user.id
         }
       };
