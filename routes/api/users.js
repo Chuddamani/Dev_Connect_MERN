@@ -18,10 +18,10 @@ router.post(
       .not()
       .isEmpty(),
     check('email', 'Please enter a valid email').isEmail(),
-    check(
-      'password',
-      'pleae enter a password with 6 or more characters'
-    ).isLength({ mim: 6, max: 20 })
+    check('password', 'Pleae enter a password with 6 or more characters')
+      .not()
+      .isEmpty()
+      .isLength({ mim: 6, max: 20 })
   ],
   async (req, res) => {
     console.log(req.body);
