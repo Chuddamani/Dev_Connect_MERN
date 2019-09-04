@@ -5,12 +5,14 @@ import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
-import { loadUser } from './actions/auth';
-import setAuthToken from './utils/setAuthToken';
+import Dashboard from './components/dashboard/Dashbpard';
+import PrivateRoute from './components/routing/PrivateRoute';
 
 // Reduc -> react-redux combines both react and redux
 import { Provider } from 'react-redux';
 import store from './store';
+import { loadUser } from './actions/auth';
+import setAuthToken from './utils/setAuthToken';
 
 import './App.css';
 
@@ -33,6 +35,7 @@ const App = () => {
             <Switch>
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
+              <PrivateRoute exact path='/dashboard' component={Dashboard} />
             </Switch>
           </section>
         </Fragment>
