@@ -30,6 +30,8 @@ const EditProfile = ({
   const [displaySocialInputs, toggleSocialInput] = useState(false);
 
   //Accepts a function that contains imperative, possibly effectful code.
+  // useEffect bascially runs when [loading, getCurrentProfile] value changes
+  //Whenever [loading, getCurrentProfile] will trigger the useEffect
   useEffect(() => {
     getCurrentProfile();
     setFormData({
@@ -47,7 +49,7 @@ const EditProfile = ({
       instagram: loading || !profile.social ? '' : profile.instagram,
       linkedin: loading || !profile.social ? '' : profile.linkedin
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
 
   const {
     company,
