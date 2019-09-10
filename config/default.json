@@ -1,6 +1,6 @@
 {
   "mongoURI": "mongodb+srv://observer:observer@devconnect-bnqz8.mongodb.net/test?retryWrites=true&w=majority",
   "jwtSecret": "mysecrettoken",
-  "gthubCliemtId": "16b1c46932fd98ebabdd",
-  "githubClientSecret": "af27e9cabce98b51bbcb772e237e4b3ae4aa14c4"
+  "githubCliemtId": "59fac5d29635f521f7ae",
+  "githubClientSecret": "872c2fd254051c2bcc0493cb5f5733dec394e7f6"
 }
